@@ -11,29 +11,6 @@ const setCookies = (cookiesObj: CookiesType): void => {
 	cookies = cookiesObj
 }
 
-// export function parseAndSaveCookies(headers: Headers) {
-// 	const rawCookies = headers.getSetCookie()
-// 	if (!rawCookies.length) throw new Error("Couldn't get cookies.")
-
-// 	const parsedCookies: CookiesType = {}
-
-// 	rawCookies.forEach(el => {
-// 		const items = el.split(';').map(e => e.trim())
-// 		if (!items.length) return
-// 		const [cookieName, cookieValue] = items[0]!.split('=')
-// 		if (!cookieName || !cookieValue) return
-// 		const expires = items
-// 			.find(el => el.toLowerCase().startsWith('expires='))
-// 			?.split('=')[1]
-// 		parsedCookies[cookieName] = {
-// 			value: cookieValue,
-// 			expires: expires ? new Date(expires).getTime() : undefined
-// 		}
-// 	})
-
-// 	setCookies(parsedCookies)
-// }
-
 export function parseAndSaveCookies(headers: Headers) {
 	const rawCookies = headers.getSetCookie()
 	if (!rawCookies.length) return
