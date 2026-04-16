@@ -1,0 +1,14 @@
+{
+	"type": "module",
+	"scripts": {
+		"start": "node ./src/main.ts",
+		"dev": "node --watch-path=./src --watch-preserve-output ./src/main.ts --dev",
+		"types": "tsc"
+	},
+	"dependencies": {
+		"@inquirer/prompts": "^8.4.1",
+		"@types/node": "^25.6.0",
+		"cheerio": "^1.2.0",
+		"typescript": "^6.0.2"
+	}
+}
